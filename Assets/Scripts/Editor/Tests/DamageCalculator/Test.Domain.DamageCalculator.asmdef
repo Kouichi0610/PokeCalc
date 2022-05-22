@@ -1,0 +1,22 @@
+{
+    "name": "Test.Domain.DamageCalculator",
+    "rootNamespace": "PokeCalc.Test.Domain.DamageCalculator",
+    "references": [
+        "GUID:7cea4062bdfc34b4783d188c5cd088da"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

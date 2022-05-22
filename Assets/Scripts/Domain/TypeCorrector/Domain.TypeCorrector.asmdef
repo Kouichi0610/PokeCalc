@@ -1,0 +1,17 @@
+{
+    "name": "Domain.TypeCorrector",
+    "rootNamespace": "PokeCalc.Domain.TypeCorrector",
+    "references": [
+        "GUID:7cea4062bdfc34b4783d188c5cd088da",
+        "GUID:1c371d83f72a61747afbcc52d5a7e6dd"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
