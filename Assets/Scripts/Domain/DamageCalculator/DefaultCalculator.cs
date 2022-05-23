@@ -3,8 +3,10 @@ namespace PokeCalc.Domain.DamageCalculator
 {
     /// <summary>
     /// Repository‚ÉˆÐ—ÍAUŒ‚A–hŒä“n‚·->
+    /// 
+    /// TODO:Moves‚ÉˆÚ“®
     /// </summary>
-    internal sealed class DefaultCalculator : IDamageCalculator
+    internal sealed class DefaultCalculator : IFomula
     {
         readonly Level level;
         readonly Power power;
@@ -20,7 +22,7 @@ namespace PokeCalc.Domain.DamageCalculator
             this.defence = defence;
             this.corrector = corrector;
         }
-        Damage IDamageCalculator.Calculate()
+        Damage IFomula.Calculate()
         {
             var l = level.Value * 2 / 5 + 2;
             var o = power.Value * offence.Value / defence.Value;

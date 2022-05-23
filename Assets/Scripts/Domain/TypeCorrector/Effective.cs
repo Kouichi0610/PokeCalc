@@ -33,18 +33,6 @@ namespace PokeCalc.Domain.TypeCorrector
             return damage.Mul(correct);
         }
 
-        string ITypeCorrector.State
-        {
-            get
-            {
-                if (correct == 0) return "‚±‚¤‚©‚Í‚È‚¢‚æ‚¤‚¾";
-                if (correct <= NotVery.correct) return "‚±‚¤‚©‚Í‚¢‚Ü‚Ð‚Æ‚Â‚Ì‚æ‚¤‚¾";
-                if (correct > Flat.correct) return "‚±‚¤‚©‚Í‚Î‚Â‚®‚ñ‚¾";
-                return "‚Ó‚Â‚¤";
-            }
-        }
-
-
         public override string ToString()
         {
             return string.Format("Effective:{0}", correct);

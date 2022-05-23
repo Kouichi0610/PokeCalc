@@ -53,9 +53,6 @@ namespace PokeCalc.Test.Domain.TypeCorrector
 
             // 4”{‚É‚È‚é‚±‚Æ
             Assert.That(c.Correct(new Damage(2)), Is.EqualTo(new Damage(8)));
-
-            // ‚±‚¤‚©‚Í‚Î‚Â‚®‚ñ‚¾
-            Assert.That(c.State, Is.EqualTo((Effective.Super as ITypeCorrector).State));
         }
 
         [Test]

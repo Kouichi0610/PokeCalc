@@ -21,3 +21,7 @@ namespace PokeCalc.Domain.Stats
         }
     }
 }
+/*
+ * UŒ‚‘¤Aç”õ‘¤
+ * ˆĞ—Í
+ */

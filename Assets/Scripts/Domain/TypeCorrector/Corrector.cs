@@ -29,8 +29,6 @@ namespace PokeCalc.Domain.TypeCorrector
             effective = e;
         }
 
-        string ITypeCorrector.State => effective.State;
-
         Damage ITypeCorrector.Correct(Damage damage)
         {
             return effective.Correct(damage);

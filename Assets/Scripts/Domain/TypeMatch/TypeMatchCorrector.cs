@@ -33,6 +33,5 @@ namespace PokeCalc.Domain.TypeMatch
         {
             return damage.Mul(value);
         }
-        string ITypeMatchCorrector.State => value == Match ? "タイプ一致" : "タイプ不一致";
     }
 }

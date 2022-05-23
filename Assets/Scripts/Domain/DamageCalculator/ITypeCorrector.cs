@@ -6,6 +6,5 @@ namespace PokeCalc.Domain.DamageCalculator
     public interface ITypeCorrector
     {
         Damage Correct(Damage damage);
-        string State { get; }
     }
 }

@@ -22,7 +22,7 @@ namespace PokeCalc.Test.Domain.DamageCalculator
                 new Offence(182),
                 new Defence(189),
                 new Corrector()
-                ) as IDamageCalculator;
+                ) as IFomula;
 
             var dmg = d.Calculate();
             Assert.That(dmg, Is.EqualTo(new Damage(44)));
@@ -32,17 +32,17 @@ namespace PokeCalc.Test.Domain.DamageCalculator
         public void ダメージ計算_ちきゅうなげ()
         {
             // こうかはばつぐん、いまひとつの影響を受けないこと
-            var effective = new FixedCalculator(50, TypeCorrector.Flat) as IDamageCalculator;
+            var effective = new FixedCalculator(50, TypeCorrector.Flat) as IFomula;
             Assert.That(effective.Calculate(), Is.EqualTo(new Damage(50)));
 
-            var super = new FixedCalculator(50, TypeCorrector.Super) as IDamageCalculator;
+            var super = new FixedCalculator(50, TypeCorrector.Super) as IFomula;
             Assert.That(super.Calculate(), Is.EqualTo(new Damage(50)));
 
-            var notVery = new FixedCalculator(50, TypeCorrector.NotVery) as IDamageCalculator;
+            var notVery = new FixedCalculator(50, TypeCorrector.NotVery) as IFomula;
             Assert.That(notVery.Calculate(), Is.EqualTo(new Damage(50)));
 
             // こうかがない場合は0になること
-            var none = new FixedCalculator(50, TypeCorrector.NoEffect) as IDamageCalculator;
+            var none = new FixedCalculator(50, TypeCorrector.NoEffect) as IFomula;
             Assert.That(none.Calculate(), Is.EqualTo(new Damage(0)));
         }
 
@@ -98,9 +98,6 @@ namespace PokeCalc.Test.Domain.DamageCalculator
             {
                 return damage.Mul(value);
             }
-
-            // TODO:削除していい
-            string ITypeCorrector.State => "";
         }
     }
 }

@@ -1,7 +1,8 @@
 namespace PokeCalc.Domain.DamageCalculator
 {
-    public interface IDamageCalculator
+    public interface IFomula
     {
         Damage Calculate();
+        // divider
     }
 }

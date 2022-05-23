@@ -5,7 +5,7 @@ namespace PokeCalc.Domain.DamageCalculator
     /// 固定ダメージ
     /// タイプ相性でこうかがない相手には0
     /// </summary>
-    public sealed class FixedCalculator : IDamageCalculator
+    public sealed class FixedCalculator : IFomula
     {
         readonly Damage damage;
 
@@ -15,7 +15,7 @@ namespace PokeCalc.Domain.DamageCalculator
             var corrected = corrector.Correct(this.damage);
             if (corrected.Value == 0) this.damage = new Damage(0);
         }
-        Damage IDamageCalculator.Calculate()
+        Damage IFomula.Calculate()
         {
             return damage;
         }
