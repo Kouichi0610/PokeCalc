@@ -16,7 +16,7 @@ namespace PokeCalc.Test.Domain.DamageCalculator
         [Test]
         public void ダメージ計算_通常()
         {
-            var d = new DefaultCalculator(
+            var d = new Default(
                 new Level(50),
                 new Power(100),
                 new Offence(182),
@@ -32,17 +32,17 @@ namespace PokeCalc.Test.Domain.DamageCalculator
         public void ダメージ計算_ちきゅうなげ()
         {
             // こうかはばつぐん、いまひとつの影響を受けないこと
-            var effective = new FixedCalculator(50, TypeCorrector.Flat) as IFomula;
+            var effective = new Fixed(50, TypeCorrector.Flat) as IFomula;
             Assert.That(effective.Calculate(), Is.EqualTo(new Damage(50)));
 
-            var super = new FixedCalculator(50, TypeCorrector.Super) as IFomula;
+            var super = new Fixed(50, TypeCorrector.Super) as IFomula;
             Assert.That(super.Calculate(), Is.EqualTo(new Damage(50)));
 
-            var notVery = new FixedCalculator(50, TypeCorrector.NotVery) as IFomula;
+            var notVery = new Fixed(50, TypeCorrector.NotVery) as IFomula;
             Assert.That(notVery.Calculate(), Is.EqualTo(new Damage(50)));
 
             // こうかがない場合は0になること
-            var none = new FixedCalculator(50, TypeCorrector.NoEffect) as IFomula;
+            var none = new Fixed(50, TypeCorrector.NoEffect) as IFomula;
             Assert.That(none.Calculate(), Is.EqualTo(new Damage(0)));
         }
 

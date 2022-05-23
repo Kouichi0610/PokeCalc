@@ -3,18 +3,17 @@ namespace PokeCalc.Domain.DamageCalculator
 {
     /// <summary>
     /// RepositoryÇ…à–óÕÅAçUåÇÅAñhå‰ìnÇ∑->
-    /// 
-    /// TODO:MovesÇ…à⁄ìÆ
     /// </summary>
-    internal sealed class DefaultCalculator : IFomula
+    internal sealed class Default : IFomula
     {
         readonly Level level;
         readonly Power power;
         readonly Offence offence;
         readonly Defence defence;
         readonly IDamageCorrector corrector;
+
         // TODO:É_ÉÅÅ[ÉWï‚ê≥
-        public DefaultCalculator(Level level, Power power, Offence offence, Defence defence, IDamageCorrector corrector)
+        public Default(Level level, Power power, Offence offence, Defence defence, IDamageCorrector corrector)
         {
             this.level = level;
             this.power = power;

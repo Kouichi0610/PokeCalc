@@ -7,6 +7,5 @@ namespace PokeCalc.Domain.DamageCalculator
     {
         Offence Offence { get; }
         Defence Defence { get; }
-        Power Power { get; }
     }
 }
