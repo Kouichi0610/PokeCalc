@@ -5,9 +5,9 @@ using UnityEngine;
 using UnityEngine.TestTools;
 
 using PokeCalc.Domain.DamageCalculator;
-using PokeCalc.Domain.Moves;
+using PokeCalc.Domain.ForcePicker;
 
-namespace PokeCalc.Test.Domain.Moves
+namespace PokeCalc.Test.Domain.ForcePicker
 {
     public class ForcePickerTest
     {

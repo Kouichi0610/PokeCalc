@@ -1,6 +1,6 @@
 {
-    "name": "Test.Domain.Moves",
-    "rootNamespace": "PokeCalc.Test.Domain.Moves",
+    "name": "Test.Domain.ForcePicker",
+    "rootNamespace": "PokeCalc.Test.Domain.ForcePicker",
     "references": [
         "GUID:73eea429da6948a48a7b9569192537b1",
         "GUID:7cea4062bdfc34b4783d188c5cd088da"

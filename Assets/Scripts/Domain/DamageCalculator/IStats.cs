@@ -1,4 +1,4 @@
-namespace PokeCalc.Domain.Moves
+namespace PokeCalc.Domain.DamageCalculator
 {
     public interface IStats
     {

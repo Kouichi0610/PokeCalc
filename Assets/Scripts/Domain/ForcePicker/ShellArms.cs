@@ -1,6 +1,6 @@
 using PokeCalc.Domain.DamageCalculator;
 
-namespace PokeCalc.Domain.Moves
+namespace PokeCalc.Domain.ForcePicker
 {
     /// <summary>
     /// シェルアームズ

@@ -1,21 +1,21 @@
 using PokeCalc.Domain.DamageCalculator;
 
-namespace PokeCalc.Domain.Moves
+namespace PokeCalc.Domain.ForcePicker
 {
     /// <summary>
-    /// イカサマ
-    /// 防御側のこうげき
+    /// ボディプレス
+    /// 攻撃側のぼうぎょ
     /// 防御側のぼうぎょ
     /// </summary>
-    internal class FoulPlay : IForcePicker
+    internal class BodyPress : IForcePicker
     {
         readonly IForce force;
-        public FoulPlay(IForce force)
+
+        public BodyPress(IForce force)
         {
             this.force = force;
         }
-
-        Offence IForcePicker.Offence => new Offence(force.Defence.Attack);
+        Offence IForcePicker.Offence => new Offence(force.Offence.Defence);
         Defence IForcePicker.Defence => new Defence(force.Defence.Defence);
     }
 }

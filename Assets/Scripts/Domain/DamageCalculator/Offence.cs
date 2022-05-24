@@ -15,8 +15,12 @@ namespace PokeCalc.Domain.DamageCalculator
         public override bool Equals(object obj)
         {
             if (!(obj is Offence)) return false;
-            var other = obj as Offence;
-            return value == other.value;
+            return GetHashCode() == obj.GetHashCode();
+        }
+
+        public override int GetHashCode()
+        {
+            return value.GetHashCode();
         }
 
         public override string ToString()
