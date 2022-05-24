@@ -2,11 +2,11 @@ namespace PokeCalc.Domain.DamageCalculator
 {
     public interface IStats
     {
-        int HP { get; }
-        int Attack { get; }
-        int Defence { get; }
-        int SpAttack { get; }
-        int SpDefence { get; }
-        int Speed { get; }
+        IStatsValue HP { get; }
+        IStatsValue Attack { get; }
+        IStatsValue Defence { get; }
+        IStatsValue SpAttack { get; }
+        IStatsValue SpDefence { get; }
+        IStatsValue Speed { get; }
     }
 }

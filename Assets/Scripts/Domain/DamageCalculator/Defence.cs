@@ -6,11 +6,16 @@ namespace PokeCalc.Domain.DamageCalculator
 
         public int Value => value;
 
-        public Defence(int value)
+        public Defence(IStatsValue value)
+            : this(value.Value)
+        {
+        }
+        internal Defence(int value)
         {
             if (value <= 0) throw new System.ArgumentOutOfRangeException(value.ToString());
             this.value = value;
         }
+
         public override bool Equals(object obj)
         {
             if (!(obj is Defence)) return false;

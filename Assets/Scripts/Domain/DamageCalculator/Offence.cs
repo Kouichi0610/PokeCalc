@@ -6,7 +6,11 @@ namespace PokeCalc.Domain.DamageCalculator
 
         public int Value => value;
 
-        public Offence(int value)
+        public Offence(IStatsValue value)
+            : this(value.Value)
+        {
+        }
+        internal Offence(int value)
         {
             if (value <= 0) throw new System.ArgumentOutOfRangeException(value.ToString());
             this.value = value;

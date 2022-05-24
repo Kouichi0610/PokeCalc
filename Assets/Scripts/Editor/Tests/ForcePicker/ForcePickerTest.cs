@@ -85,6 +85,26 @@ namespace PokeCalc.Test.Domain.ForcePicker
             return new Force(p);
         }
 
+        class StatsValue :IStatsValue
+        {
+            public int Value { get; private set; }
+
+            public StatsValue(int v)
+            {
+                Value = v;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (!(obj is StatsValue)) return false;
+                return GetHashCode() == obj.GetHashCode();
+            }
+            public override int GetHashCode()
+            {
+                return Value;
+            }
+        }
+
         class Force : IForce
         {
             public IStats Offence { get; private set; }
@@ -97,21 +117,21 @@ namespace PokeCalc.Test.Domain.ForcePicker
             }
             class Stats : IStats
             {
-                public int HP { get; private set; }
-                public int Attack { get; private set; }
-                public int Defence { get; private set; }
-                public int SpAttack { get; private set; }
-                public int SpDefence { get; private set; }
-                public int Speed { get; private set; }
+                public IStatsValue HP { get; private set; }
+                public IStatsValue Attack { get; private set; }
+                public IStatsValue Defence { get; private set; }
+                public IStatsValue SpAttack { get; private set; }
+                public IStatsValue SpDefence { get; private set; }
+                public IStatsValue Speed { get; private set; }
 
                 public Stats(int a, int b, int c, int d, int e, int f)
                 {
-                    HP = a;
-                    Attack = b;
-                    Defence = c;
-                    SpAttack = d;
-                    SpDefence = e;
-                    Speed = f;
+                    HP = new StatsValue(a);
+                    Attack = new StatsValue(b);
+                    Defence = new StatsValue(c);
+                    SpAttack = new StatsValue(d);
+                    SpDefence = new StatsValue(e);
+                    Speed = new StatsValue(f);
                 }
             }
         }

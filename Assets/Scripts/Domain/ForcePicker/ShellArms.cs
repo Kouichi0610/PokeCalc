@@ -45,11 +45,11 @@ namespace PokeCalc.Domain.ForcePicker
 
         float PhysicalRate()
         {
-            return (float)force.Offence.Attack / force.Defence.Defence;
+            return (float)force.Offence.Attack.Value / force.Defence.Defence.Value;
         }
         float SpecialRate()
         {
-            return (float)force.Offence.SpAttack / force.Defence.SpDefence;
+            return (float)force.Offence.SpAttack.Value / force.Defence.SpDefence.Value;
         }
     }
 }
