@@ -19,7 +19,7 @@ namespace PokeCalc.Domain.Stats
 
         public int Value => value;
 
-        private Individuals(int value)
+        public Individuals(int value)
         {
             if (value < 0 || value > 31)
             {

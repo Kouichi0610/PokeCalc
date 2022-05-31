@@ -1,0 +1,24 @@
+{
+    "name": "Test.Domain.Stats.Calculator",
+    "rootNamespace": "PokeCalc.Test.Domain.Stats.Calculator",
+    "references": [
+        "GUID:7cea4062bdfc34b4783d188c5cd088da",
+        "GUID:6d8fbb51b7706994fa100a52b2774724",
+        "GUID:5f77b8e47eff2e34bb75bba90913d3f8"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

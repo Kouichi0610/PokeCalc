@@ -5,6 +5,9 @@ namespace PokeCalc.Domain.DamageCalculator
 {
     /// <summary>
     /// ダメージのパターン一覧の計算
+    /// 
+    /// TODO: -> IDamageDivider
+    ///          ダメージ固定と分ける
     /// </summary>
     public class DamagePattern
     {

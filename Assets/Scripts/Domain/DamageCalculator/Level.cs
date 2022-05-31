@@ -1,6 +1,6 @@
 namespace PokeCalc.Domain.DamageCalculator
 {
-    public sealed  class Level
+    public sealed class Level
     {
         readonly int value;
 
