@@ -1,8 +1,9 @@
 {
-    "name": "Domain.Stats.Picker",
-    "rootNamespace": "PokeCalc.Domain.Stats.Picker",
+    "name": "Domain.Stats.Processor",
+    "rootNamespace": "PokeCalc.Domain.Stats.Processor",
     "references": [
-        "GUID:6d8fbb51b7706994fa100a52b2774724"
+        "GUID:6d8fbb51b7706994fa100a52b2774724",
+        "GUID:5f77b8e47eff2e34bb75bba90913d3f8"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

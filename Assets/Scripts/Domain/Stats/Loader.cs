@@ -2,6 +2,7 @@ using PokeCalc.Domain.DamageCalculator;
 
 namespace PokeCalc.Domain.Stats
 {
+    // TODO:”jŠüAIStatsBuilder‚É
     public sealed class Loader
     {
         // Loader(ID, Nature)
