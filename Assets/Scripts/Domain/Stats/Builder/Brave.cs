@@ -3,15 +3,15 @@ using PokeCalc.Domain.Stats.Calculator;
 namespace PokeCalc.Domain.Stats.Builder
 {
     /// <summary>
-    /// ‚æ‚¤‚«
+    /// ‚ä‚¤‚©‚ñ
     /// </summary>
-    internal class Jolly : IStatsBuilder
+    internal class Brave : IStatsBuilder
     {
         ICalculator IStatsBuilder.HP => new HP();
-        ICalculator IStatsBuilder.Attack => new Flat();
+        ICalculator IStatsBuilder.Attack => new Upper();
         ICalculator IStatsBuilder.Defence => new Flat();
-        ICalculator IStatsBuilder.SpAttack => new Lower();
+        ICalculator IStatsBuilder.SpAttack => new Flat();
         ICalculator IStatsBuilder.SpDefence => new Flat();
-        ICalculator IStatsBuilder.Speed => new Upper();
+        ICalculator IStatsBuilder.Speed => new Lower();
     }
 }
